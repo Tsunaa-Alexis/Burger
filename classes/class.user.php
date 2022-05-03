@@ -1,0 +1,99 @@
+<?php
+class User
+{
+	// Attributs
+	private $_idUser;
+	private $_nom;
+	private $_prenom;
+	private $_mail;
+	private $_mdp;
+	
+
+	public function __construct(array $donnees)
+	{
+		$this->hydrate($donnees);
+	}
+
+	public function hydrate(array $donnees)
+	{
+		foreach($donnees as $key => $value) {
+
+			$method = 'set'.ucfirst($key);
+
+			if(method_exists($this, $method))
+			{
+				$this->$method($value);
+			}
+		}
+	}
+
+	// Getters
+
+	public function getId()
+	{
+		return $this->_id;
+	}
+
+	public function getNom()
+	{
+		return $this->_nom;
+	}
+
+	public function getPrenom()
+	{
+		return $this->_prenom;
+	}
+
+	public function getMail()
+	{
+		return $this->_mail;
+	}
+
+	public function getMdp()
+	{
+		return $this->_mdp;
+	}
+
+	public function getNumTel()
+	{
+		return $this->_numTel;
+	}
+
+	// Setters
+
+	public function setId($id)
+	{
+		$id = (int) $id;
+		if ($id > 0)
+		{
+			$this->_id = $id;
+		}	
+	}
+
+	public function setNom($nom)
+	{
+		if(is_string($nom))
+		{
+			$this->_nom = $nom;
+		}	
+	}
+
+	public function setPrenom($prenom){
+		if(is_string($prenom))
+		{
+			$this->_prenom = $prenom;
+		}	
+	}
+	
+	public function setMail($mail)
+	{
+		$this->_mail = $mail;
+	}
+
+	public function setMdp($mdp)
+	{
+		$this->_mdp = $mdp;
+	}
+
+}
+?>

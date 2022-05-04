@@ -12,7 +12,7 @@ class UserManager{
 	public function add(User $user)
 	{
         
-		$q = $this->_db->prepare('INSERT INTO users(nom,prenom,type,mail,mdp,numTel) VALUES(:nom, :prenom, :type, :mail, :mdp, :numTel)');
+		$q = $this->_db->prepare('INSERT INTO user(nom,prenom,type,mail,mdp,numTel) VALUES(:nom, :prenom, :type, :mail, :mdp, :numTel)');
 		$q->bindValue(':nom', $user->getNom());
 		$q->bindValue(':prenom', $user->getPrenom());
 		$q->bindValue(':type', $user->getType());
@@ -31,7 +31,7 @@ class UserManager{
 	// récupérer les informations en fonction de l'email
 	public function getUser($sonMail)
 	{
-		$q= $this->_db->query('SELECT  nom, prenom, mail, mdp, type, numTel, id FROM users WHERE mail = "'. $sonMail .'"');
+		$q= $this->_db->query('SELECT  nom, prenom, mail, mdp, type, numTel, id FROM user WHERE mail = "'. $sonMail .'"');
 		$userInfo = $q->fetch(PDO::FETCH_ASSOC);
 
 		if($userInfo){
@@ -45,7 +45,7 @@ class UserManager{
 	// récupérer les informations d'un utilisateurs à partir de sont id
 	public function getUserbyid($id)
 	{
-		$q= $this->_db->prepare('SELECT  nom, prenom, mail, mdp, type, numTel, id FROM users WHERE id = :id');
+		$q= $this->_db->prepare('SELECT  nom, prenom, mail, mdp, type, numTel, id FROM user WHERE id = :id');
 		$q->bindValue(':id', $id);
 		$q->execute();
 		$userInfo = $q->fetch(PDO::FETCH_ASSOC);
@@ -61,7 +61,7 @@ class UserManager{
 	// modifier les information d'un user
 	public function edit(User $user)
 	{
-		$q = $this->_db->prepare("UPDATE users SET nom = :nom, prenom = :prenom, mail = :mail, numTel = :numTel WHERE id = :id");
+		$q = $this->_db->prepare("UPDATE user SET nom = :nom, prenom = :prenom, mail = :mail, numTel = :numTel WHERE id = :id");
 
 
 		$q->bindValue(':nom', $user->getNom());
@@ -76,14 +76,14 @@ class UserManager{
 	// compter le nombre d'utilisateurs
 	public function count()
 	{
-		return $this->_db->query("SELECT COUNT(*) FROM users")->fetchColumn();
+		return $this->_db->query("SELECT COUNT(*) FROM user")->fetchColumn();
 	}
 
 	// vérifier qu'un email est déjà utilisé
-	public function mailExists($mailUser){
+	public function emailExists($emailUser){
 
-		$q = $this->_db->prepare('SELECT COUNT(*) FROM users WHERE mail = :mail');
-		$q->execute([':mail'=> $mailUser]);
+		$q = $this->_db->prepare('SELECT COUNT(*) FROM user WHERE email = :email');
+		$q->execute([':email'=> $mailUser]);
 		return (bool) $q->fetchColumn();
 
 	}

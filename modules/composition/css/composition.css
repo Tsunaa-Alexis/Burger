@@ -1,3 +1,6 @@
+ul#list-ingredients-ajout{
+    display: none;
+  }
 .container-ajout {
     display: flex;
 }
@@ -57,6 +60,7 @@
 #price .table .titreTable>h2 {
     font-size: 40px;
     font-weight: lighter;
+    color: rgb(246, 189, 34);
 }
 
 #price .table .titreTable>h3 {

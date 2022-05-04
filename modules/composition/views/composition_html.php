@@ -30,16 +30,7 @@
 
 </div>
 <!-- fin container ajout -->
-  <div class="container marketing">
 
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <button class="btn btn-primary"><svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg></button>
-        <h2>Viande</h2>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-  <div>
 
 
   <div id="price">
@@ -50,9 +41,20 @@
                 </div>
                 <div class="content">
                 <div class="bout">
-                        <a href="#">Choisir</a>
+                       <a href="#" onclick="myFunction()">Choisir</a>
                     </div>
 </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("list-ingredients-ajout");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
             </article>
 
             <article>

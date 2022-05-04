@@ -1,8 +1,17 @@
 
-<?php include("header.php");?>
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php include("header.php");?>
+    <?php if(!isset($_SESSION['idUser'])){ header('Location: ./'); } ?>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="javascript" type="text/javascript" src="js/inscription.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<?php include("navBar.php");?>
 <main>
 
   <h1 class="display-4" id="title">Fabrique ton burger</h1>
@@ -92,4 +101,6 @@ function myFunction() {
 
 
   <?php include("footer.php");?>
+</body>
+</html>
 

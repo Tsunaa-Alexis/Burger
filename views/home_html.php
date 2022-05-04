@@ -1,8 +1,16 @@
 
-<?php include("header.php");?>
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php include("header.php");?>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="javascript" type="text/javascript" src="js/inscription.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<?php include("navBar.php");?>
 <main>
 
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-interval="100000">
@@ -60,4 +68,6 @@
 
 
   <?php include("footer.php");?>
+    </body>
+    </html>
 

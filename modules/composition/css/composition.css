@@ -1,0 +1,109 @@
+.container-ajout {
+    display: flex;
+}
+
+
+#title {
+    margin-top: 7rem;
+}
+
+#list-ingredients-ajout {
+    width: 30%;
+    margin-top: 2rem;
+}
+
+
+#sectionComposition {
+    padding-top: 125px;
+    min-height: 90vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /*   border: solid blue 1px;*/
+}
+
+#price .table {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#price .table>* {
+    height: 155px;
+    margin: 2%;
+    width: 280px;
+    /*  background-color: teal;*/
+    border-radius: 5px;
+
+    border: 1px solid lightgrey;
+}
+
+#price .table .titreTable {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(59, 58, 58);
+    border-radius: 5px 5px 0 0;
+    align-items: center;
+}
+
+#price .table .titreTable>h2 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+#price .table .titreTable>h3 {
+
+    font-weight: lighter;
+}
+
+#price .table .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 95px;
+    font-weight: lighter;
+}
+
+#price .table .content>.bout {
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f29e29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#price .table .content>.bout>* {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+
+
+}
+
+#price .table .content>.bout:hover {
+    opacity: 0.9;
+}
+
+#price .table .TableBleu .titreTable, #price .table .TableBleu .content>.bout {
+    background-color: dodgerblue;
+    color: white;
+
+}
+
+#price .table>.TableBleu {
+    border-color: dodgerblue;
+}

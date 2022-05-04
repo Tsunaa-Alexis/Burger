@@ -12,25 +12,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> -->
         <img src="https://fr.peugeot-saveurs.com/fstrz/r/s/c/fr.peugeot-saveurs.com/wp/wp-content/uploads/2021/02/IMG_0063-1024x0.jpg.avif?frz-v=32" class="d-block w-100" alt="burger">
         <div class="container">
           <div class="carousel-caption text-start">
             <h1>Choisis un Burger parmis nos meilleur recette</h1>
-            <!-- <p>Some representative placeholder content for the first slide of the carousel.</p> -->
-            <p><a class="btn btn-lg btn-warning" href="#">Go, j'ai faim!</a></p>
+            <p><a class="btn btn-lg btn-warning" href="">Go, j'ai faim!</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> -->
         <img src="https://www.sandraseasycooking.com/wp-content/uploads/2022/02/Build-Your-Own-Burger-Board-2.jpg" class="d-block w-100" alt="burger">
 
         <div class="container">
           <div class="carousel-caption">
             <h1>Fabrique ton burger sur mesure</h1>
-            <!-- <p>Some representative placeholder content for the second slide of the carousel.</p> -->
-            <p><a class="btn btn-lg btn-warning" href="#">Go, j'ai faim!</a></p>
+            <p><a class="btn btn-lg btn-warning" href="./?action=composition">Go, j'ai faim!</a></p>
           </div>
         </div>
       </div>
@@ -49,11 +45,18 @@
 
 
   <div class="container marketing">
-
+   
 
 
   </div><!-- /.container -->
-
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script>
+		$(function () {
+	       $('#date').datetimepicker();
+	   });
+	</script>
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
 
 
   <?php include("footer.php");?>

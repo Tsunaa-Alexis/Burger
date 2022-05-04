@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-        <?php include ("header.php"); ?>
-        <script language="javascript" type="text/javascript" src="js/inscription.min.js"></script>
-    </head>
-    <body>  
-        <div class="main">
-            <div class="container">
+
+<?php include("header.php");?>
+
+
+
+
+
+
+
+    <main>
+        <!-- <div class="main"> -->
+            <div class="container container-inscription">
                 <div class="jumbotron">
-                    <h1 class="display-4">Inscription</h1>
+                    <h1 class="display-4 ">Inscription</h1>
                     <p class="lead">Merci de remplir ce formulaire d'inscription.</p>
-                    <hr class="my-4">
+                    <hr class="my-4 ">
                         <p>Vous ferez bientôt parti de nos membres. Vous avez fait le bon choix ;-)</p>
                     </hr>
                 </div>
@@ -45,8 +47,8 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-md-4 mb-3">
-                            <label for="motDePasse1">Votre mot de passe *</label>
+                        <div class="col-md-4 mb-3 ">
+                            <label for="motDePasse1 ">Votre mot de passe *</label>
                             <input type="password" class="form-control" name="motdepasse1" required>
                         </div>
                     </div>
@@ -59,9 +61,10 @@
                             </div>
                         </div>
                     </div>
-                    <input type="submit" class="btn btn-primary"/>
+                    <input type="submit" class="btn btn-warning mb-5" value="M'inscrire!" name="inscription"></input>
                 </form>
             </div>
-        </div>
-    </body>
-</html>
+        <!-- </div> -->
+    
+
+    <?php include("footer.php");?>

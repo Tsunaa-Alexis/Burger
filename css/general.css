@@ -1,5 +1,22 @@
-#connexion-btn{
+.container-header-auth {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container-inscription, .container-login {
+    margin-top: 6rem;
+}
+
+
+#connexion-btn {
     text-decoration: none;
-color: yellow;
+    color: #FFC108;
+
+}
+
+.lien-inscription {
+    color: #FFC108;
+    text-decoration: none;
 
 }

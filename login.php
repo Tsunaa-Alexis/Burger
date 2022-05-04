@@ -1,15 +1,9 @@
+<?php include("header.php");?>
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Login</title>
-        <?php include ("header.php"); ?>
-        <script language="javascript" type="text/javascript" src="js/login.min.js"></script>
-        <link rel="stylesheet" href="./css/login.min.css">
-    </head>
-    <body>
+<main>
+<div id="inscription-container ">
         <div class="main">
-            <div class="container">
+            <div class="container container-login">
                 <div class="jumbotron">
                     <h1 class="display-4">Connexion</h1>
                     <p class="lead">Merci de vous identifier</p>
@@ -36,9 +30,11 @@
                             Vous devez fournir un mot de passe.
                         </div>
                     </div>
-                    <input type="submit" value="Valider" class="btn btn-primary" name="identifier" />
+                    <input type="submit" value="Je me connecte" class="btn btn-warning mb-5 mt-4" />               
                 </form>
             </div>
         </div>
-    </body>
-</html>
+        </div>
+
+
+      <?php include("footer.php");?>

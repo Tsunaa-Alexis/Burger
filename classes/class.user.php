@@ -5,8 +5,8 @@ class User
 	private $_idUser;
 	private $_nom;
 	private $_prenom;
-	private $_mail;
-	private $_mdp;
+	private $_email;
+	private $_password;
 	
 
 	public function __construct(array $donnees)
@@ -44,14 +44,14 @@ class User
 		return $this->_prenom;
 	}
 
-	public function getMail()
+	public function getEmail()
 	{
-		return $this->_mail;
+		return $this->_email;
 	}
 
-	public function getMdp()
+	public function getPassword()
 	{
-		return $this->_mdp;
+		return $this->_password;
 	}
 
 	public function getNumTel()
@@ -85,14 +85,14 @@ class User
 		}	
 	}
 	
-	public function setMail($mail)
+	public function setemail($Email)
 	{
-		$this->_mail = $mail;
+		$this->_email = $email;
 	}
 
-	public function setMdp($mdp)
+	public function setPassword($password)
 	{
-		$this->_mdp = $mdp;
+		$this->_password = $password;
 	}
 
 }

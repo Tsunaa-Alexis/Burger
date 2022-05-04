@@ -1,15 +1,15 @@
 <?php
 
 include_once($_SERVER['DOCUMENT_ROOT']."/Burger/scripts/connectBDD.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/classes/class.UserManager.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/classes/class.User.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/Burger/classes/class.userManager.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/Burger/classes/class.user.php");
 
 $userManager = new UserManager($db);
 
-$retour['emailPresent'] = $userManager->emailExists($_POST['mail']);
+$retour['emailPresent'] = $userManager->emailExists($_POST['email']);
 
 if(!$retour['emailPresent']){
-    $user = new User(['nom' => $_POST['nom'], 'prenom' => $_POST['prenom'], 'email' => $_POST['email'], 'password' => password_hash($_POST['password'], PASSWORD_BCRYPT), 'type' => "USER", 'numTel' => $_POST['numTel']]); 
+    $user = new User(['nom' => $_POST['nom'], 'prenom' => $_POST['prenom'], 'email' => $_POST['email'], 'password' => password_hash($_POST['password'], PASSWORD_BCRYPT)]); 
     $userManager->add($user);
 }
 

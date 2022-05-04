@@ -29,9 +29,9 @@ class User
 
 	// Getters
 
-	public function getId()
+	public function getIdUser()
 	{
-		return $this->_id;
+		return $this->_idUser;
 	}
 
 	public function getNom()
@@ -61,12 +61,12 @@ class User
 
 	// Setters
 
-	public function setId($id)
+	public function setIdUser($idUser)
 	{
-		$id = (int) $id;
-		if ($id > 0)
+		$idUser = (int) $idUser;
+		if ($idUser > 0)
 		{
-			$this->_id = $id;
+			$this->_idUser = $idUser;
 		}	
 	}
 
@@ -85,7 +85,7 @@ class User
 		}	
 	}
 	
-	public function setemail($Email)
+	public function setEmail($email)
 	{
 		$this->_email = $email;
 	}

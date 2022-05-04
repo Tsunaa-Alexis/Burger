@@ -12,18 +12,16 @@ class UserManager{
 	public function add(User $user)
 	{
         
-		$q = $this->_db->prepare('INSERT INTO user(nom,prenom,type,mail,mdp,numTel) VALUES(:nom, :prenom, :type, :mail, :mdp, :numTel)');
+		$q = $this->_db->prepare('INSERT INTO user(nom,prenom,email,password) VALUES(:nom, :prenom,:email, :password)');
 		$q->bindValue(':nom', $user->getNom());
 		$q->bindValue(':prenom', $user->getPrenom());
-		$q->bindValue(':type', $user->getType());
-		$q->bindValue(':mail', $user->getMail());
-		$q->bindValue(':mdp', $user->getMdp());
-		$q->bindValue(':numTel', $user->getNumTel());
+		$q->bindValue(':email', $user->getEmail());
+		$q->bindValue(':password', $user->getPassword());
 
 		$q->execute();
 
 		$user->hydrate([
-			'id' => $this->_db->lastInsertId(),
+			'idUser' => $this->_db->lastInsertId(),
         ]);
 
 	}
@@ -31,7 +29,7 @@ class UserManager{
 	// récupérer les informations en fonction de l'email
 	public function getUser($sonMail)
 	{
-		$q= $this->_db->query('SELECT  nom, prenom, mail, mdp, type, numTel, id FROM user WHERE mail = "'. $sonMail .'"');
+		$q= $this->_db->query('SELECT  nom, prenom, email, password, idUser FROM user WHERE email = "'. $sonMail .'"');
 		$userInfo = $q->fetch(PDO::FETCH_ASSOC);
 
 		if($userInfo){
@@ -83,21 +81,21 @@ class UserManager{
 	public function emailExists($emailUser){
 
 		$q = $this->_db->prepare('SELECT COUNT(*) FROM user WHERE email = :email');
-		$q->execute([':email'=> $mailUser]);
+		$q->execute([':email'=> $emailUser]);
 		return (bool) $q->fetchColumn();
 
 	}
 
-	public function verifLoginInfos($mail, $password){
+	public function verifLoginInfos($email, $password){
 
-		if(empty($mail)){ return false; }
+		if(empty($email)){ return false; }
 		if(empty($password)){ return false; }
 
-		$utilisateur = $this->getUser($mail);
+		$utilisateur = $this->getUser($email);
 
 		if(!empty($utilisateur)){
 
-			if(password_verify($password, $utilisateur->getMdp())){
+			if(password_verify($password, $utilisateur->getPassword())){
 				return true;
 			}
 

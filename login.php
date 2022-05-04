@@ -1,5 +1,16 @@
-<?php include("header.php");?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php include("header.php");?>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="javascript" type="text/javascript" src="js/login.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<?php include("navBar.php");?>
 <main>
 <div id="inscription-container ">
         <div class="main">
@@ -12,7 +23,7 @@
                 <div class="popUp hide">
                     <div class="messageAlerte">Identifiants incorrect</div>
                 </div>
-                <form method="post" id="formId"  onsubmit="return verifForm(this)" novalidate>
+                <form id="formId"  onsubmit="return verifForm(this)" novalidate>
                     <div class="form-group row">
                         <div class="col-md-4 mb-3">
                             <label for="email">Adresse électronique : </label>
@@ -39,3 +50,5 @@
 
 
       <?php include("footer.php");?>
+</body>
+</html>

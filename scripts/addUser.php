@@ -6,8 +6,6 @@ include_once($_SERVER['DOCUMENT_ROOT']."/Burger/classes/class.user.php");
 
 $userManager = new UserManager($db);
 
-$userManager->sanitize($_POST, 'sql');
-
 $retour['emailPresent'] = $userManager->emailExists($_POST['email']);
 
 if(!$retour['emailPresent']){

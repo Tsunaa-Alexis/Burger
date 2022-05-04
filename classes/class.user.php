@@ -7,7 +7,6 @@ class User
 	private $_prenom;
 	private $_email;
 	private $_password;
-	
 
 	public function __construct(array $donnees)
 	{

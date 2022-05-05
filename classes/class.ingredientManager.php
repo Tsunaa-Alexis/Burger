@@ -12,17 +12,27 @@ class IngredientManager {
 		$this->_db = $db;
 	}
 
-    public function recupIngredients(){
+    public function recupIngredients($debut = '', $limite = '', $order = ''){
 
         $allResults = array();
+        $allResults['result'] = array();
+        $allResults['numRows'] = 0;
 
-        $q= $this->_db->prepare('SELECT * FROM ingredients');
+		$limit = "";
+        if($debut !== '' && $limite !== ''){
+            $limit = " LIMIT ".$debut.",".$limite;
+        }
+
+        $q= $this->_db->prepare('SELECT * FROM ingredients '.$order.$limit);
 		$q->execute();
 		$ingredients = $q->fetchAll(PDO::FETCH_ASSOC);
+
+		$q= $this->_db->prepare('SELECT COUNT(*) FROM ingredients');
+		$q->execute();
+		$allResults['numRows'] = $q->fetchColumn();
         
-		foreach($ingredients as $ingredient){
-            
-            $allResults[] = new Ingredient($ingredient);
+		foreach($ingredients as $ingredient){ 
+            $allResults['result'][] = new Ingredient($ingredient);
         }	
 
 		return $allResults;

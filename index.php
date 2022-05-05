@@ -1,6 +1,6 @@
 <?php
 
-$_SERVER['DOCUMENT_ROOT'] = $_SERVER['DOCUMENT_ROOT']."/Burger";
+$_SERVER['DOCUMENT_ROOT'] = $_SERVER['DOCUMENT_ROOT']."/3W/Burger";
 
 
 if(!isset($_GET['action'])){ $_GET['action'] = ""; include('home.php'); }

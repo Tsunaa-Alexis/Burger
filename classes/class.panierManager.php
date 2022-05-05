@@ -1,5 +1,5 @@
 <?php
-class PanierManager{
+class PanierManager {
 	
 	private $_db;
 
@@ -10,7 +10,6 @@ class PanierManager{
     public function verifIfPanierExist($idUser){
 
         if(empty($idUser)){ $idUser = 0; }
-
         $q = $this->_db->prepare('SELECT COUNT(*) FROM panier WHERE idUser = :idUser');
 		$q->execute([':idUser'=> $idUser]);
 		return (bool) $q->fetchColumn();
@@ -46,7 +45,6 @@ class PanierManager{
         $retour = $panier['idPanier'];
 
         return $retour;
-
     }
 
     // initialisation de la db

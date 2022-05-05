@@ -1,8 +1,8 @@
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT']."/Burger/scripts/connectBDD.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/Burger/classes/class.userManager.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/Burger/classes/class.user.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/3W/Burger/scripts/connectBDD.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/3W/Burger/classes/class.userManager.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/3W/Burger/classes/class.user.php");
 
 $userManager = new UserManager($db);
 

@@ -1,13 +1,53 @@
-ul#list-ingredients-ajout{
+#ingredients-ajout {
     display: none;
-  }
-.container-ajout {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
+#ingredients-ajout .card-body {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.list-container-row {
+display: flex;
+flex-direction: row;
+}
+.container-card {
+
+    padding-top: 85px;
+    min-height: 90vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.container-ajout {
+    display: flex;
+    flex-direction: column;
+}
+
+#list-ingredients-ajoutes {
+    width: 80%;
+    margin-top: 2rem;
+    margin-left: 2rem;
+
+}
 
 #title {
     margin-top: 7rem;
+    margin-left: 2rem;
 }
 
 #list-ingredients-ajout {
@@ -28,6 +68,86 @@ ul#list-ingredients-ajout{
     /*   border: solid blue 1px;*/
 }
 
+/* CARTES INGREDIENTS*/
+
+#ingredients .container-card {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#ingredients .container-card>* {
+    height: 155px;
+    margin: 2%;
+    width: 280px;
+    /*  background-color: teal;*/
+    border-radius: 5px;
+
+    border: 1px solid lightgrey;
+}
+
+#ingredients .container-card .titreTable {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(59, 58, 58);
+    border-radius: 5px 5px 0 0;
+    align-items: center;
+}
+
+#ingredients .container-card .titreTable>h2 {
+    font-size: 40px;
+    font-weight: lighter;
+    color: rgb(246, 189, 34);
+}
+
+#ingredients .container-card .titreTable>h3 {
+
+    font-weight: lighter;
+}
+
+#ingredients .container-card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 95px;
+    font-weight: lighter;
+}
+
+#ingredients .container-card .content>.bout {
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f29e29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#ingredients .container-card .content>.bout>* {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+
+
+}
+
+#ingredients .container-card .content>.bout:hover {
+    opacity: 0.9;
+}
+
+
+
+
+/* CATEGORIES */
 #price .table {
     width: 90%;
     display: flex;

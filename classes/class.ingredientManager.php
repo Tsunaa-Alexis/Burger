@@ -39,6 +39,22 @@ class IngredientManager {
 
     }
 
+	public function suppIngredient($idIngredient){
+
+		$q= $this->_db->prepare('SELECT  idIngredient FROM burger_ingredients WHERE idIngredient = :id');
+		$q->bindValue(':id', $idIngredient);
+		$q->execute();
+		$ingredientInfo = $q->fetch(PDO::FETCH_ASSOC);
+
+		if ($ingredientInfo){
+			return false;
+		}	
+
+		$q= $this->_db->prepare('DELETE FROM ingredients WHERE idIngredient = ?');
+		$q->execute([$idIngredient]);
+		return true;
+	}
+
 }
 
 ?>

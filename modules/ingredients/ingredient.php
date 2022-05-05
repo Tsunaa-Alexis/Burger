@@ -5,7 +5,7 @@
         <?php include ("header.php"); ?>
         <link rel="stylesheet" href="./modules/ingredients/css/listingIngredients.min.css">
         <link rel="stylesheet" href="./css/listing.min.css">
-        <!-- <script language="javascript" type="text/javascript" src="./modules/categories/js/categories.min.js"></script> -->
+        <script language="javascript" type="text/javascript" src="./modules/ingredients/js/ingredient.js"></script>
         <script type="text/javascript">
             function changeResultatsParPage(){
                 var url = '<?php echo recupGetVars(array('nbResultats','page')); ?>'
@@ -98,7 +98,7 @@
                                 <div class="action">
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-secondary" title="modifier" onclick="msgBoxEditCategorie(<?=$ingredient->getIdIngredient()?>)"><i class="fas fa-edit"></i></button>
-                                        <button type="button" class="btn btn-sm btn-danger" title="Supprimer" onclick="suppCategorie(<?=$ingredient->getIdIngredient()?>)"><i class="fas fa-times-circle"></i></button>
+                                        <button type="button" class="btn btn-sm btn-danger" title="Supprimer" onclick="suppIngredient(<?=$ingredient->getIdIngredient()?>)"><i class="fas fa-times-circle"></i></button>
                                     </div>
                                 </div>
                             </div>

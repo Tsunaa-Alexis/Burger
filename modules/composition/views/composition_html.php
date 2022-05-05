@@ -19,27 +19,48 @@
 
 <div class="container-ajout">
 
-
-<ul class="list-group" id="list-ingredients-ajout">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
+<!-- liste -->
+<ul class="list-group" id="list-ingredients-ajoutes">
+  <li class="list-group-item">Mes ingrédients choisis: </li>
+  <li class="list-group-item">Tomate <button type="button" class="btn btn-sm" onclick="supprimerIngrédient()">Supprimer</button></li>
 </ul>
+<!-- fin liste -->
 
-<!-- faire loop sur carte des ingredients -->
- <div class="card" style="width: 18rem;">
-  <img src="https://static9.depositphotos.com/1628352/1107/i/600/depositphotos_11071361-stock-photo-tomato.jpg" class="card-img-top" alt="tomate">
-  <div class="card-body">
-    <h5 class="card-title">Tomate</h5>
-    <a href="#" class="btn btn-primary">Ajouter</a>
+</div>
+
+
+<div id="ingredients">
+  <div class="container-card">
+    <!-- faire loop sur carte des ingredients -->
+    <div class="card" style="width: 8rem;" id="ingredients-ajout">
+    
+      <img src="https://static9.depositphotos.com/1628352/1107/i/600/depositphotos_11071361-stock-photo-tomato.jpg" class="card-img-top" alt="tomate">
+      <div class="card-body">
+        <h5 class="card-title">Tomate</h5>
+        <a href="#" class="bout" onclick="ajouterIngredient()">Ajouter</a>
+      </div>
+
+
+
+          <img src="https://static9.depositphotos.com/1628352/1107/i/600/depositphotos_11071361-stock-photo-tomato.jpg" class="card-img-top" alt="tomate">
+          <div class="card-body">
+            <h5 class="card-title">Concombre</h5>
+            <a href="#" class="bout" onclick="ajouterIngredient()">Ajouter</a>
+          </div>
+
+
+          <img src="https://static9.depositphotos.com/1628352/1107/i/600/depositphotos_11071361-stock-photo-tomato.jpg" class="card-img-top" alt="tomate">
+          <div class="card-body">
+            <h5 class="card-title">Patate</h5>
+            <div class="bout">
+            <a href="#"  onclick="ajouterIngredient()">Ajouter</a>
+</div>
+          </div>
+    </div>
   </div>
 </div>
 
-</div>
 <!-- fin container ajout -->
-
 
 
   <div id="price">
@@ -50,17 +71,32 @@
                 </div>
                 <div class="content">
                 <div class="bout">
-                       <a href="#" onclick="myFunction()">Choisir</a>
+                       <a href="#" onclick="myFunctionViande()">Choisir</a>
                     </div>
-</div>
+    </div>
 <script>
-function myFunction() {
-  var x = document.getElementById("list-ingredients-ajout");
+function myFunctionViande() {
+  var x = document.getElementById("ingredients-ajout");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
     x.style.display = "none";
   }
+}
+
+const ajouterIngredient= ()=>{
+  console.log("je veux ajouter");
+  var listAjoute = document.getElementById("list-ingredients-ajoutes");
+  var newDiv = document.createElement("li");
+  var newContent = document.createTextNode('tomate');
+  newDiv.appendChild(newContent);
+  newDiv.setAttribute("class", "list-group-item");
+  const newDivButton = newDiv.appendChild(document.createElement("button"));
+  listAjoute.appendChild(newDiv);
+}
+
+const supprimerIngrédient=()=>{
+  console.log("je veux supprimer");
 }
 </script>
 
@@ -74,7 +110,7 @@ function myFunction() {
                 <div class="bout">
                         <a href="#">Choisir</a>
                     </div>
-</div>
+          </div>
             </article>
 
             <article>
@@ -85,16 +121,11 @@ function myFunction() {
                 <div class="bout">
                         <a href="#">Choisir</a>
                     </div>
-</div>
+            </div>
             </article>
             
         </div>
   </div>
-
-
-
-
-
 
 
 

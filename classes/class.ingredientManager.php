@@ -55,6 +55,7 @@ class IngredientManager {
 		return true;
 	}
 
+
 }
 
 ?>

@@ -1,6 +1,7 @@
 <?php
 
-$_SERVER['DOCUMENT_ROOT'] = $_SERVER['DOCUMENT_ROOT']."/Burger";
+$_SERVER['DOCUMENT_ROOT'] = $_SERVER['DOCUMENT_ROOT']."/3W/Burger";
+
 include('fonctions/main.php');
 
 //CONFIGURATION LISTING RESULTATS

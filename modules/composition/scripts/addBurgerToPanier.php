@@ -3,9 +3,9 @@
 session_start();
 if(!isset($_SESSION['idUser'])){ exit; }
 
-include_once($_SERVER['DOCUMENT_ROOT']."/Burger/scripts/connectBDD.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/3W/Burger/scripts/connectBDD.php");
 
-function chargerClasse($classname){ require $_SERVER['DOCUMENT_ROOT'].'/Burger/classes/class.'.$classname.'.php'; }
+function chargerClasse($classname){ require $_SERVER['DOCUMENT_ROOT'].'/3W/Burger/classes/class.'.$classname.'.php'; }
 spl_autoload_register('chargerClasse');
 
 $userManager = new UserManager($db);
@@ -43,4 +43,5 @@ $retour['burgerModified'] = $burgerManager->suppIngredient($burger, 1);
 
 header('Content-Type: application/json');
 echo '<pre>'; print_r($retour);
+echo "hello";
 ?>

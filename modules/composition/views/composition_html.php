@@ -68,40 +68,32 @@
   </div>
 
 
-
+       <?php
+        $ingredientManager = new IngredientManager($db);
+        $arrayIngredients = $ingredientManager->recupIngredients();
+        $arrayIngredients = $arrayIngredients['result'];
+       ?>
 
 
 <!-- <div id="ingredients"> -->
   <div class="container-card">
     <!-- faire loop sur carte des ingredients -->
     <div class="card" style="width: 8rem;" id="ingredients-ajout">
+            <!-- <?php echo "<pre>"; print_r($arrayIngredients)?>  -->
+
+    <?php foreach($arrayIngredients as $ingredient){?>
 
       <div class="oneCard">
-        <img src="https://static9.depositphotos.com/1628352/1107/i/600/depositphotos_11071361-stock-photo-tomato.jpg" class="card-img-top" alt="tomate">
+        <img src="<?=$ingredient->getImg()?>" class="card-img-top" alt="tomate">
+          <span><?=$ingredient->getPrix()?> €</span>
+
         <div class="card-body">
-          <h5 class="card-title">Tomate</h5>
-          <a href="#" class="bout" onclick="ajouterIngredient()">Ajouter</a>
+          <h5 class="card-title" id="nom-ingredient"><?=$ingredient->getNom()?> </h5>
+          <a href="#" id="ajout-ingredient-bouton" class="bout" onclick="initElement()">Ajouter</a>
         </div>
       </div>
+    <?php } ?>
 
-      <div class="oneCard">
-        <img src="https://static9.depositphotos.com/1628352/1107/i/600/depositphotos_11071361-stock-photo-tomato.jpg" class="card-img-top" alt="tomate">
-        <div class="card-body">
-          <h5 class="card-title">Tomate</h5>
-          <a href="#" class="bout" onclick="ajouterIngredient()">Ajouter</a>
-        </div>
-      </div>
-
-
-            <div class="oneCard">
-        <img src="https://static9.depositphotos.com/1628352/1107/i/600/depositphotos_11071361-stock-photo-tomato.jpg" class="card-img-top" alt="tomate">
-        <div class="card-body">
-          <h5 class="card-title">Tomate</h5>
-          <a href="#" class="bout" onclick="ajouterIngredient()">Ajouter</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 </div>

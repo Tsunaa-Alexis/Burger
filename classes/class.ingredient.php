@@ -62,7 +62,7 @@ class Ingredient
 		$this->_nom = $nom;
 	}
 
-	public function setCategorie($categorie){
+	public function setCategorie(Categorie $categorie){
 		$this->_categorie = $categorie;
 	}
 

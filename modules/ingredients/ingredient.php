@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Catégories</title>
-        <?php include ("header.php"); ?>
+        <title>Ingédients</title>
+        <?php include("header.php");?>
         <link rel="stylesheet" href="./modules/ingredients/css/listingIngredients.min.css">
         <link rel="stylesheet" href="./css/listing.min.css">
         <!-- <script language="javascript" type="text/javascript" src="./modules/categories/js/categories.min.js"></script> -->
@@ -48,14 +48,14 @@
         $pageMaxAffichee = $infosPagination['pageMaxAffichee'];
         
         ?>
-        <div class="main">
+        <div class="main" style="margin-top: 70px;">
             <?php include ("navBar.php"); ?>
             <div class="container">
                 <div class="header">
                     <div class="sectionHeader" style="width:100%; height:40px;">
                         <div style="width:100%; height:40px;">
                             <div class="sectionTitle" style="float:left; padding-top:5px; font-size:25px;"><strong>Liste des Ingrédients</strong></div>
-                                <div class="sectionAddAction" style="float:left; padding-left:20px;"><button type="button" onclick="msgBoxAddCategorie();" class="btn btn-info btn-sm" title="Ajouter une catégorie"><i class="fas fa-plus"></i> Catégorie</button></div>
+                                <div class="sectionAddAction" style="float:left; padding-left:20px;"><a type="button" href="./?action=ajoutIngredient" class="btn btn-info btn-sm" title="Ajouter une catégorie"><i class="fas fa-plus"></i> Ingrédients</a></div>
                         </div>
                     </div>
                     <div class="divider"></div>

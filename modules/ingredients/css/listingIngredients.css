@@ -1,47 +1,52 @@
-.container{
-    display: flex;
-    flex-direction: column;
+.main {
+    margin-top: 7rem;
 }
 
-.ligne{
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.ligne {
     display: flex;
     flex-direction: row;
 }
 
-.nom{
+.nom {
     width: 80px;
     min-width: 80px;
     flex-basis: 80px;
     flex-grow: 1;
 }
 
-.idCategorie{
+.idCategorie {
     width: 80px;
     min-width: 80px;
     flex-basis: 80px;
     flex-grow: 1;
 }
 
-.isVegetarien{
+.isVegetarien {
     width: 80px;
     min-width: 80px;
     flex-basis: 80px;
     flex-grow: 1;
 }
 
-.prix{
+.prix {
     width: 120px;
     min-width: 120px;
     flex-basis: 120px;
     flex-grow: 3;
 }
 
-.action{
+.action {
     width: 100px;
     min-width: 100px;
     flex-basis: 100px;
 }
 
-.action .btn-group{
+.action .btn-group {
     padding: 3px;
 }

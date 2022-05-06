@@ -13,6 +13,8 @@ if($_GET['action'] === 'inscription'){ include('inscription.php'); }
 if($_GET['action'] === 'login'){ include('login.php');}
 if($_GET['action'] === 'composition'){ include('./modules/composition/composition.php'); }
 if($_GET['action'] === 'listeIngredients'){ include('./modules/ingredients/ingredient.php'); }
+if($_GET['action'] === 'ajoutIngredient'){ include('./modules/ingredients/ajoutIngredient.php'); }
+
 
 
 ?>

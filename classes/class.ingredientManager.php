@@ -39,6 +39,21 @@ class IngredientManager {
 
     }
 
+	public function addIngredient (Ingredient $ingredient) {
+		
+		$q = $this->_db->prepare('INSERT INTO ingredients(nom, prix, isVegetarien, idCategorie, img) VALUES(:nom, :prix,:isVegetarien, :idCategorie, :img)');
+		$q->bindValue(':nom', $ingredient->getNom());
+		$q->bindValue(':prix', $ingredient->getPrix());
+		$q->bindValue(':isVegetarien', $ingredient->getIsVegetarien());
+		$q->bindValue(':idCategorie', $ingredient->getCategorie()->getIdCategorie());
+		$q->bindValue(':img', $ingredient->getImg());
+
+		$q->execute();
+
+		// $ingredient->hydrate([
+		// 	'idUser' => $this->_db->lastInsertId(),
+        // ]);	
+	}
 	
 }
 

@@ -1,3 +1,6 @@
+.main {
+    margin-top: 7rem;
+}
 
 .container-header-auth {
     display: flex;
@@ -20,8 +23,4 @@
     color: #FFC108;
     text-decoration: none;
 
-}
-
-.main {
-    margin-top: 70px;
 }

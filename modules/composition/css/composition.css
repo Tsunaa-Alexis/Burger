@@ -1,37 +1,15 @@
 #ingredients-ajout {
-    display: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#ingredients-ajout .card-body {
     width: 90%;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-
-}
-
-.list-container-row {
-display: flex;
-flex-direction: row;
-}
-.container-card {
-
-    padding-top: 85px;
-    min-height: 90vh;
-    width: 100%;
-
-    display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
     align-items: center;
-
+    margin: 3rem;
+    /* border: 1px black solid; */
 }
+
+
 
 .container-ajout {
     display: flex;
@@ -56,26 +34,38 @@ flex-direction: row;
 }
 
 
-#sectionComposition {
-    padding-top: 125px;
-    min-height: 90vh;
-    width: 100%;
+/* CARTES INGREDIENTS*/
 
+
+.oneCard {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    /*   border: solid blue 1px;*/
+    /* margin: 3rem; */
+    margin: 3rem;
+    border: 1px black solid;
+    min-width: 8rem;
+
 }
 
-/* CARTES INGREDIENTS*/
+#ingredients-ajout {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    display: flex;
+}
 
 #ingredients .container-card {
     width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
 }
 
@@ -83,13 +73,11 @@ flex-direction: row;
     height: 155px;
     margin: 2%;
     width: 280px;
-    /*  background-color: teal;*/
     border-radius: 5px;
-
     border: 1px solid lightgrey;
 }
 
-#ingredients .container-card .titreTable {
+.titreTable {
     height: 70px;
     display: flex;
     flex-direction: column;
@@ -99,7 +87,7 @@ flex-direction: row;
     align-items: center;
 }
 
-#ingredients .container-card .titreTable>h2 {
+#ingredients .titreTable>h2 {
     font-size: 40px;
     font-weight: lighter;
     color: rgb(246, 189, 34);
@@ -110,7 +98,7 @@ flex-direction: row;
     font-weight: lighter;
 }
 
-#ingredients .container-card .content {
+.content {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -119,7 +107,7 @@ flex-direction: row;
     font-weight: lighter;
 }
 
-#ingredients .container-card .content>.bout {
+.content>.bout {
     width: 80%;
     height: 50px;
     border-radius: 5px;
@@ -131,7 +119,7 @@ flex-direction: row;
 
 }
 
-#ingredients .container-card .content>.bout>* {
+.content>.bout>* {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -140,7 +128,7 @@ flex-direction: row;
 
 }
 
-#ingredients .container-card .content>.bout:hover {
+.content>.bout:hover {
     opacity: 0.9;
 }
 
@@ -148,6 +136,8 @@ flex-direction: row;
 
 
 /* CATEGORIES */
+
+
 #price .table {
     width: 90%;
     display: flex;
@@ -161,9 +151,7 @@ flex-direction: row;
     height: 155px;
     margin: 2%;
     width: 280px;
-    /*  background-color: teal;*/
     border-radius: 5px;
-
     border: 1px solid lightgrey;
 }
 

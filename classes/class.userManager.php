@@ -12,11 +12,10 @@ class UserManager{
 	public function add(User $user)
 	{
         
-		$q = $this->_db->prepare('INSERT INTO user(nom,prenom,email,password) VALUES(:nom, :prenom,:email, :password)');
+		$q = $this->_db->prepare('INSERT INTO user(nom,prenom,email,password) VALUES(:nom, :prenom,:email)');
 		$q->bindValue(':nom', $user->getNom());
 		$q->bindValue(':prenom', $user->getPrenom());
 		$q->bindValue(':email', $user->getEmail());
-		$q->bindValue(':password', $user->getPassword());
 
 		$q->execute();
 

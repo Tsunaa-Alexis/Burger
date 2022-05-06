@@ -39,6 +39,7 @@ class IngredientManager {
 
     }
 
+<<<<<<< HEAD
 	public function addIngredient (Ingredient $ingredient) {
 		
 		$q = $this->_db->prepare('INSERT INTO ingredients(nom, prix, isVegetarien, idCategorie, img) VALUES(:nom, :prix,:isVegetarien, :idCategorie, :img)');
@@ -55,6 +56,25 @@ class IngredientManager {
         // ]);	
 	}
 	
+=======
+	public function suppIngredient($idIngredient){
+
+		$q= $this->_db->prepare('SELECT  idIngredient FROM burger_ingredients WHERE idIngredient = :id');
+		$q->bindValue(':id', $idIngredient);
+		$q->execute();
+		$ingredientInfo = $q->fetch(PDO::FETCH_ASSOC);
+
+		if ($ingredientInfo){
+			return false;
+		}	
+
+		$q= $this->_db->prepare('DELETE FROM ingredients WHERE idIngredient = ?');
+		$q->execute([$idIngredient]);
+		return true;
+	}
+
+
+>>>>>>> abd970798ecb087245780e5ea6e18d89c8e75b14
 }
 
 ?>

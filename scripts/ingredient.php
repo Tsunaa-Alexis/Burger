@@ -2,9 +2,9 @@
 
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT']."/Burger/scripts/connectBDD.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/Burger/classes/class.ingredientManager.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/Burger/classes/class.ingredient.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/3W/Burger/scripts/connectBDD.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/3W/Burger/classes/class.ingredientManager.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/3W/Burger/classes/class.ingredient.php");
 
 $ingredientManager = new IngredientManager($db);
 

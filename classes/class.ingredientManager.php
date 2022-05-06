@@ -39,7 +39,7 @@ class IngredientManager {
 
     }
 
-<<<<<<< HEAD
+
 	public function addIngredient (Ingredient $ingredient) {
 		
 		$q = $this->_db->prepare('INSERT INTO ingredients(nom, prix, isVegetarien, idCategorie, img) VALUES(:nom, :prix,:isVegetarien, :idCategorie, :img)');
@@ -51,12 +51,9 @@ class IngredientManager {
 
 		$q->execute();
 
-		// $ingredient->hydrate([
-		// 	'idUser' => $this->_db->lastInsertId(),
-        // ]);	
 	}
 	
-=======
+
 	public function suppIngredient($idIngredient){
 
 		$q= $this->_db->prepare('SELECT  idIngredient FROM burger_ingredients WHERE idIngredient = :id');
@@ -74,7 +71,6 @@ class IngredientManager {
 	}
 
 
->>>>>>> abd970798ecb087245780e5ea6e18d89c8e75b14
 }
 
 ?>
